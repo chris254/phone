@@ -2,12 +2,16 @@ function compareCosts() {
     const contractSim = parseFloat(document.getElementById('contractSim').value) || 0;
     const contractPhone = parseFloat(document.getElementById('contractPhone').value) || 0;
     const downpayment = parseFloat(document.getElementById('downpayment').value) || 0;
+    const discount = parseFloat(document.getElementById('discount').value) || 0;
     const outrightPhone = parseFloat(document.getElementById('outrightPhone').value) || 0;
     const outrightSim = parseFloat(document.getElementById('outrightSim').value) || 0;
 
     const months = 24;
 
-    const totalContract = (contractSim + contractPhone) * months + downpayment;
+    // Total contract cost = monthly SIM + monthly phone × 24 + downpayment − discount
+    const totalContract = (contractSim + contractPhone) * months + downpayment - discount;
+
+    // Total outright cost = outright phone + monthly SIM × 24
     const totalOutright = outrightPhone + (outrightSim * months);
 
     let resultText = `
