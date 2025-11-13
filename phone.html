@@ -9,10 +9,14 @@
 <body>
     <div class="container">
         <h1>Phone Cost Comparison</h1>
-        <p>Compare the total cost of buying a phone on contract vs outright over 2 years.</p>
+        <p>Compare the total cost of buying a phone on contract vs outright</p>
 
         <div class="form-section">
             <h2>Contract Option</h2>
+
+            <label>Contrdact Length (Years):</label>
+            <input type="number" id="contractLength" placeholder="e.g. 2">
+
             <label>Monthly SIM Cost (£):</label>
             <input type="number" id="contractSim" placeholder="e.g. 15">
             
@@ -23,7 +27,7 @@
             <input type="number" id="downpayment" placeholder="e.g. 100">
 
             <label>One-Off Discount (£):</label>
-            <input type="number" id="discount" placeholder="e.g. 50">
+            <input type="number" id="contractDiscount" placeholder="e.g. 50">
         </div>
 
         <div class="form-section">
@@ -33,6 +37,9 @@
             
             <label>Monthly SIM Cost (£):</label>
             <input type="number" id="outrightSim" placeholder="e.g. 10">
+
+            <label>One-Off discount (£):</label>
+            <input type="number" id="outrightDiscount" placeholder="e.g. 0">
         </div>
 
         <button onclick="compareCosts()">Compare Costs</button>
