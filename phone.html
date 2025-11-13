@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Cost Comparison</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Phone Cost Comparison</h1>
+        <p>Compare the total cost of buying a phone on contract vs outright over 2 years.</p>
+
+        <div class="form-section">
+            <h2>Contract Option</h2>
+            <label>Monthly SIM Cost (£):</label>
+            <input type="number" id="contractSim" placeholder="e.g. 15">
+            
+            <label>Monthly Phone Cost (£):</label>
+            <input type="number" id="contractPhone" placeholder="e.g. 25">
+            
+            <label>Initial Downpayment (£):</label>
+            <input type="number" id="downpayment" placeholder="e.g. 100">
+        </div>
+
+        <div class="form-section">
+            <h2>Outright Option</h2>
+            <label>Total Phone Cost (£):</label>
+            <input type="number" id="outrightPhone" placeholder="e.g. 700">
+            
+            <label>Monthly SIM Cost (£):</label>
+            <input type="number" id="outrightSim" placeholder="e.g. 10">
+        </div>
+
+        <button onclick="compareCosts()">Compare Costs</button>
+
+        <div id="result" class="result"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
